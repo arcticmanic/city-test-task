@@ -1,0 +1,21 @@
+/* Variables */
+
+$basic-font: "Arial", sans-serif;
+$basic-font-size: 18px;
+$basic-font-line-height: 1.2;
+
+:root {
+  --basic-black: #000000;
+  --basic-black-35: rgba(0, 0, 0, 0.35);
+  --basic-blue: #4488bb;
+  --basic-dark-blue: #2e5d80;
+  --basic-blue-75: rgba(68, 136, 187, 0.75);
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #eeeeee;
+  --basic-asphalt: #333333;
+  --basic-red: #bb4444;
+  --link-grey: #aaaaaa;
+  --border-color: #adadad;
+  --overlay-color: rgba(51, 51, 51, 0.75);
+}

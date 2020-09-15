@@ -1,0 +1,35 @@
+header.page-header
+  .page-header__wrapper.wrapper
+    .page-header__container.container
+      .page-header__content
+        h1.page-header__heading Banner header
+        .page-header__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      form(action="#").page-header__form.main-form
+        .main-form__title Request form
+        .main-form__row
+          input.main-form__input(id="email" type="email" name="email" required)
+          label.main-form__label(for="email") Enter your E-Mail
+          button.main-form__reset-field(type="button")
+            svg(fill="currentColor" width="10" height="10")
+              path(fill-rule="evenodd" d="M8.828 9.993L5.005 6.172 1.181 9.993.003 8.816l3.824-3.822L.003 1.173 1.181-.004l3.824 3.821L8.828-.004l1.178 1.177-3.823 3.821 3.823 3.822-1.178 1.177z")
+        .main-form__row
+          input.main-form__input(id="username" type="text" name="username" pattern="([a-zA-Z0-9-\\s]+)|([а-яА-ЯЁё0-9-\\s]+)" required)
+          label(for="username").main-form__label Enter your name
+          button.main-form__reset-field(type="button")
+            svg(fill="currentColor" width="10" height="10")
+              path(fill-rule="evenodd" d="M8.828 9.993L5.005 6.172 1.181 9.993.003 8.816l3.824-3.822L.003 1.173 1.181-.004l3.824 3.821L8.828-.004l1.178 1.177-3.823 3.821 3.823 3.822-1.178 1.177z")
+        .main-form__row
+          label(for="country").visually-hidden.main-form__label Select you country
+          .main-form__select-wrapper
+            select.main-form__select(id="country" name="country" required)
+              option(value="") Select your country
+              option(value="Russia") Russia
+              option(value="Belarus") Belarus
+              option(value="Germany") Germany
+        .main-form__row
+          input(id="tc" type="checkbox" name="tc" required).main-form__checkbox.visually-hidden
+          label(for="tc").main-form__label I agree with Terms & Conditions
+        .main-form__row
+          button.main-form__button(type="submit") Submit
+          a.main-form__link(href="#") Hyperlink
+        .tooltip Enter correct E-mail

@@ -1,0 +1,8 @@
+- var footerItems = ['Reprehenderit - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore', 'Tempor - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Amet - Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.']
+
+footer.page-footer
+  .page-footer__wrapper.wrapper
+    .page-footer__container.container
+      ul.page-footer__list
+        each footerItem, index in footerItems
+          li.page-footer__item #[sup #{index+1}] #{footerItem}

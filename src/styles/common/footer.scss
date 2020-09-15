@@ -1,0 +1,31 @@
+.page-footer {
+
+}
+
+.page-footer__wrapper {
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
+
+.page-footer__list {
+  @include reset-list;
+  border-left: 5px solid var(--basic-blue);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-footer__item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+  sup {
+    position: absolute;
+    left: 18px;
+    top: -5px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

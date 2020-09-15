@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+  block head
+    head
+      meta(charset="utf-8")
+      meta(name="description" content=header.site.meta.description)
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      title=header.site.title
+      block stylesheets
+        link(rel="stylesheet" href="css/styles.css")
+  body.page-body
+    block header
+      include ../includes/header
+    block content
+    block footer
+      include ../includes/footer
+    block scripts
+      script(src="js/main.js")

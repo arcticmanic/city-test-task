@@ -1,0 +1,46 @@
+extends layouts/base
+
+block content
+
+  - var promoList = ['Duis aute irure dolor in reprehenderit1 in voluptate velit', 'Ullamco laboris nisi ut aliquip ex ea commodo consequat','Ut enim ad minim veniam, quis nostrud exercitation', 'Et dolore magna aliqua', 'Sed do eiusmod tempor2 incididunt ut labore', 'Lorem ipsum dolor sit amet3 consectetur adipisicing elit'];
+
+  main.page-main
+    .posts
+      .posts__wrapper.wrapper
+        .posts__container.container
+          ul.posts__list
+            each val in [1, 2, 3, 4, 5]
+              li.posts__item
+                .posts__image
+                  picture
+                    source(type="image/webp" media="(min-width: 1240px)" srcset="img/post-"+val+"-image.webp")
+                    source(type="image/webp" srcset="img/post-"+val+"-image-mobile.webp")
+                    source(media="(min-width: 1240px)" srcset="img/post-"+val+"-image.jpg")
+                    img(src="img/post-"+val+"-image-mobile.jpg" width="300" height="170" alt="Post image")
+                .posts__content
+                  .posts__heading Post header #{val}
+                  .posts__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  .posts__link
+                    svg(fill="currentColor" width="18" height="18")
+                      path(fill-rule="evenodd" d="M9 9V0h9v9H9zm7.5-7.5h-6v6h6v-6zm-15 15h12v-6H15V18H0V3h7.5v1.5h-6v12z")
+    .promo
+      .promo__wrapper.wrapper
+        .promo__container.container
+          .promo__image
+            img(src="img/imac.png" width="503" height="491" alt="Promo image")
+          .promo__block
+            .promo__heading Title text
+            ul.promo__list
+              each promoItem in promoList
+                li.promo__item= promoItem
+    .modal
+      .modal__title External link
+      .modal__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .modal__controls
+        button.modal__button(type="button") Cancel
+        button.modal__button.modal__button--accent(type="button") Accept
+      .modal__close
+        svg(fill="currentColor" width="30" height="30")
+          path(fill-rule="evenodd" d="M15 30C6.716 30 0 23.284 0 15 0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15zm0-27.5C8.096 2.5 2.5 8.096 2.5 15S8.096 27.5 15 27.5c6.903 0 12.5-5.596 12.5-12.5S21.903 2.5 15 2.5zm5.738 20.006L15 16.768l-5.738 5.738-1.768-1.768L13.232 15 7.494 9.262l1.768-1.768L15 13.233l5.738-5.739 1.768 1.768L16.768 15l5.738 5.738-1.768 1.768z")
+        span.visually-hidden Close modal window
+    .overlay
